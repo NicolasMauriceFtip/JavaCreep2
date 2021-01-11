@@ -74,7 +74,7 @@ function dessiner() {
                let g = 50;
                let b = i;
    
-               ctx.fillStyle = rgb(${r}, ${g}, ${b});
+               ctx.fillStyle = `rgb(${r}, ${g}, ${b})`;
                ctx.fillRect(x, HEIGHT, largeurBarre, -hauteurBarre)
    
                x += largeurBarre + 1;
