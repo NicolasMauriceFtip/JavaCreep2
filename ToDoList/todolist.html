@@ -1,33 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do List</title>
-</head>
-<body>
-    <header> 
-        <nav>
-            <ul>
-            <li><a href="../Home/index.html">Home Back</a></li>
-            <li><a href="../music/music.html">Let's Play The Music</a></li>
-            <li><a href="../Meteo/meteo.html">Let's see the weather</a></li>
-            <li><a href="../GitHub/github.html">Find Me In Github </a></li>
-            <li><a href="../ToDoList/todolist.html">To Do LIST</a></li>
-            <li><a href="../JSON/json.html">ABOUT ME </a></li>
-            </ul>
-      </nav>
-</header>
-<main>
- <h1>What Should I Do ?</h1>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>To Do List</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul>
+					<li><a href="../Home/index.html">Home Back</a></li>
+					<li><a href="../music/music.html">Let's Play The Music</a></li>
+					<li><a href="../Meteo/meteo.html">Let's see the weather</a></li>
+					<li><a href="../GitHub/github.html">Find Me In Github </a></li>
+					<li><a href="../ToDoList/todolist.html">To Do LIST</a></li>
+					<li><a href="../JSON/json.html">ABOUT ME </a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<h1>What Should I Do ?</h1>
 
+			<div>
+				<div class="container">
+					<div>
+						<div>
+							<h1>To Do List</h1>
+						</div>
+						<div>
+							<input
+								type="text"
+								id="filter"
+								placeholder="Search Items..."
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- lists -->
+			<div class="container">
+				<!-- add list -->
+				<div>
+					<h2>Add item</h2>
+					<form id="addForm">
+						<input type="text" id="item" placeholder="add list" />
+						<input type="submit" value="Add" />
+					</form>
 
-</main>
-<footer>
-    <h2>Team ######</h2>
-    <h2> &copy; 2021</h2>
-</footer>
-    
-    
-</body>
+					<!-- to do -->
+					<h2>To do</h2>
+					<ul id="to-do-items" class="to-do-list">
+						<!-- empty list -->
+					</ul>
+
+					<h2>Completed</h2>
+					<ul id="items-completed" class="completed-list">
+						<!-- empty list -->
+					</ul>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<h2>Team ######</h2>
+			<h2>&copy; 2021</h2>
+		</footer>
+
+		<script src="todolist.js"></script>
+	</body>
 </html>
