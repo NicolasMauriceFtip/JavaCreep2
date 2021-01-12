@@ -21,6 +21,9 @@ function addItem(e) {
 	itemList.appendChild(li);
 
 	//create completeBtn
+
+	//	let completeBtn = document.createElement('input');
+
 	let completeBtn = document.createElement('button');
 	completeBtn.className = 'complete';
 	completeBtn.appendChild(document.createTextNode('complete'));
@@ -63,11 +66,8 @@ function completeItem(e) {
 	li.className = 'completed-lists';
 	li.appendChild(document.createTextNode(item));
 	del.appendChild(li);
-	itemCompleted.appendChild(del);
-
-	//if (e.target.classList.contains('complete')) {
 	itemList.removeChild(e.target.parentElement);
-	//}
+	itemCompleted.appendChild(del);
 }
 
 // Filter Items
