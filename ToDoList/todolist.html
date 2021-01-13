@@ -9,7 +9,7 @@
 	<body>
 		<header>
 			<nav>
-				<ul>
+				<ul id="navigator">
 					<li><a href="../Home/index.html">Home Back</a></li>
 					<li><a href="../music/music.html">Let's Play The Music</a></li>
 					<li><a href="../Meteo/meteo.html">Let's see the weather</a></li>
@@ -31,13 +31,23 @@
 			<div>
 				<h2>Add item</h2>
 				<form id="addForm">
-					<input type="text" id="item" placeholder="add list" />
-					<input type="submit" value="Add" />
+					<input
+						type="text"
+						id="item"
+						class="add"
+						placeholder="add list"
+					/>
+					<input type="submit" id="submit" class="addBtn" value="Add" />
+					<br />
+					<br />
 				</form>
+				<button id="clr" type="submit">Clear list</button>
 
 				<div id="list-TODO">
 					<!-- to do -->
+
 					<h2>To do</h2>
+
 					<ul id="to-do-items">
 						<!-- empty list -->
 					</ul>
