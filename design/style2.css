@@ -1,0 +1,112 @@
+/************* GENERAL **************/
+@font-face{
+	font-family: miller;
+	src: url(./Miller-Regular.otf);
+}
+@font-face{
+	font-family: lato thin;
+	src:url(./lato-light-webfont.woff2);
+}
+@font-face{
+	font-family: lato regular;
+	src: url(./Lato-Regular.ttf);
+}
+
+*{
+	box-sizing: border-box;
+	padding-top: none;
+    padding-bottom: none;
+    margin:0;
+	padding:0;
+	
+}
+
+/************* BIG PARTS **************/
+footer, header{
+    background-color: rgb(43, 104, 128);
+	color: white;
+	font-family: lato thin;
+	border-radius: 2em 0.5em;
+	height:5em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+body{
+	background-color: rgb(255, 255, 255);
+	font-family: arial;
+	text-align: center;
+   	margin-left: 10em;
+    margin-right: 10em;
+}
+
+/************* MENU **************/
+#menu{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	
+}
+
+ul{
+	list-style: none;
+	
+}
+li{
+	margin: 0.5em;
+    padding: 0.5em;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: rgb(236, 105, 29);
+}
+
+/************* ABOUT US **************/
+main{
+	border: 2px solid rgb(236, 105, 29);
+	border-radius: 2em 0.5em;
+	margin-top : 3em;
+	margin-bottom : 3em;
+	padding : 1em;
+	display: flex;
+	flex-direction: column;
+	font-family: lato regular;
+
+}
+h1{
+	color: rgb(236, 105, 29);
+	margin-top: -1.8em;
+	text-align: left;
+	font-family: miller;
+	
+
+}
+
+/************* TEAM JAVACREEP **************/
+#top-banner{
+	margin-top:1em;
+}
+h2{
+	font-family: miller;
+	font-size: 2em;
+	color: rgb(43, 104, 128);
+}
+#info{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+section{
+	margin: 1em;
+	
+}
+#member{
+	margin: 1em;
+	color: rgb(236, 105, 29);
+}
+
+
