@@ -4,6 +4,7 @@ let filter = document.getElementById('filter');
 let itemCompleted = document.getElementById('items-completed');
 
 //add item
+
 form.addEventListener('submit', addItem);
 function addItem(e) {
 	// bloque action par defaut de l'interface event
