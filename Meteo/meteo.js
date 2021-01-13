@@ -51,7 +51,7 @@ fetch(url)
     .then(data => {
         console.log(data);
 
-        const { main, name, sys, weather } = data;
+        const { main, name, sys, weather , wind } = data;
         const icon = `https://openweathermap.org/img/wn/${weather[0]["icon"]}@2x.png`;
 
         const li = document.createElement("li");
@@ -67,8 +67,19 @@ fetch(url)
             <img class="city-icon" src=${icon} alt=${weather[0]["main"]}>
             <figcaption>${weather[0]["description"]}</figcaption>
         </figure>
+        <div><br>${wind.speed}m/s</div>
+        <div id="compass_div">
+        
+          <div class="compass" style="transform: rotate(${wind.deg}deg)"></div>
+          
+          Vents
+        </div>
+        <div><br>Humidité: ${main.humidity}%</div>
+
         `;
-        //document.querySelector("#arrow").style.transform = 'rotate(' + 90 +'deg)';
+        
+        
+
         
         li.innerHTML = markup;
         list.appendChild(li);
