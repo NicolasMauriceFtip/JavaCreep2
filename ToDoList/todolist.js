@@ -4,6 +4,7 @@ let filter = document.getElementById('filter');
 let itemCompleted = document.getElementById('items-completed');
 
 //add item
+
 form.addEventListener('submit', addItem);
 function addItem(e) {
 	// bloque action par defaut de l'interface event
@@ -21,6 +22,9 @@ function addItem(e) {
 	itemList.appendChild(li);
 
 	//create completeBtn
+
+	//	let completeBtn = document.createElement('input');
+
 	let completeBtn = document.createElement('button');
 	completeBtn.className = 'complete';
 	completeBtn.appendChild(document.createTextNode('complete'));
@@ -63,11 +67,8 @@ function completeItem(e) {
 	li.className = 'completed-lists';
 	li.appendChild(document.createTextNode(item));
 	del.appendChild(li);
-	itemCompleted.appendChild(del);
-
-	//if (e.target.classList.contains('complete')) {
 	itemList.removeChild(e.target.parentElement);
-	//}
+	itemCompleted.appendChild(del);
 }
 
 // Filter Items

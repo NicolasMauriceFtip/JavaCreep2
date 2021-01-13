@@ -1,95 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../design/style.css" rel="stylesheet">
-    <title>GUESS WHO I AM !</title>
-</head>
-<body>
-    <header> 
-        <nav>
-            <ul>
-                <li><a href="../Home/index.html">Home Back</a></li>
-                <li><a href="../Meteo/meteo.html">Let's see the weather</a></li>
-                <li><a href="../Github/github.html">Find Me In Github </a></li>
-                <li><a href="../ToDoList/todolist.html">To Do LIST</a></li>
-                <li><a href="../JSON/json.html">ABOUT ME </a></li>
-                <li><a href="../music/music.html">Let's Play The Music</a></li>
-            </ul>
-       </nav>
-</header>
-<main>
-    <p> GUESS WHO I AM !  </p>
-    <div class="container">
-        <form class="quiz-form">
-            <div class="question">
-                <h2> Je suis le plus petit pays , qui suis-je ? </h2>
-                 <div>
-                     <input type="radio" id="malte" name="q1" value="a">
-                     <label for="malte">Malte</label>
-                 </div>
-                 <div>
-                    <input type="radio" id="monaco" name="q1" value="b">
-                    <label for="monaco">Monaco</label>
-                </div>
-                <div>
-                    <input type="radio" id="vatican" name="q1" value="c">
-                    <label for="vatican">Vatican</label>
-                </div>
-            </div>
-            <div class="question">
-                <h2> Je suis le pays le plus peuplé,qui suis-je ? </h2>
-                 <div>
-                     <input type="radio" id="singapore" name="q2" value="a">
-                     <label for="singapore">Singapore</label>
-                 </div>
-                 <div>
-                    <input type="radio" id="chine" name="q2" value="b">
-                    <label for="chine">Chine</label>
-                </div>
-                <div>
-                    <input type="radio" id="inde" name="q2" value="c">
-                    <label for="inde">Inde</label>
-                </div>
-            </div>
-            <div class="question">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="../design/style.css" rel="stylesheet" />
+		<title>GUESS WHO I AM !</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul>
+					<li><a href="../Home/index.html">Home Back</a></li>
+					<li><a href="../Meteo/meteo.html">Let's see the weather</a></li>
+					<li><a href="../Github/github.html">Find Me In Github </a></li>
+					<li><a href="../ToDoList/todolist.html">To Do LIST</a></li>
+					<li><a href="../JSON/json.html">ABOUT ME </a></li>
+					<li><a href="../music/music.html">Let's Play The Music</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<p>GUESS WHO I AM !</p>
 
-                <h2> Je suis le fleuve le plus long ,qui suis-je ? </h2>
-                 <div>
-                     <input type="radio" id="mississippi" name="q3" value="a">
-                     <label for="mississippi">Mississippi</label>
-                 </div>
-                 <div>
-                    <input type="radio" id="amazone" name="q3" value="b">
-                    <label for="amazone">Amazone</label>
-                </div>
-                <div>
-                    <input type="radio" id="Nil" name="q3" value="c">
-                    <label for="Nil">Nil</label>
-                </div>
+			<div id="quiz"></div>
 
-            </div>
-            <button type="submit">Validez  !</button>
-        </form>
-    </div>
-    <div class="resultats">
-        <h2>Votre resultat final</h2>
-        <p class="aide"></p>
-        <p class="note"></p>
-      </div>
-   
+			<button id="submit">Get Results</button>
 
-</main>
-<footer>
-    <div class="footer">
-        <h2>Team JavaCreep</h2>
-        <h3>Léa-Rabeb-Jesusa-Alex-Nicolas</h3>
-        <h3> All rights reserved &copy; 2021</h3>
-    </div>
-</footer>
-<script src="quiz.html"></script>
-    
-    
-</body>
+			<div id="results"></div>
+		</main>
+		<footer>
+			<div class="footer">
+				<h2>Team JavaCreep</h2>
+				<h3>Léa-Rabeb-Jesusa-Alex-Nicolas</h3>
+				<h3>All rights reserved &copy; 2021</h3>
+			</div>
+		</footer>
+		<script src="quiz.js"></script>
+	</body>
 </html>
