@@ -9,7 +9,7 @@ var myQuestions = [
 		correctAnswer: 'c',
 	},
 	{
-		question: 'Je suis le pays le plus peuplé,qui suis-je ?',
+		question: 'Je suis le pays le plus peuplé, qui suis-je ?',
 		answers: {
 			a: 'Chine',
 			b: 'Inde',
@@ -72,10 +72,12 @@ function generateQuiz(
 			// add this question and its answers to the output
 			output.push(
 				'<div class="question">' +
+					'<h3>' +
 					questions[i].question +
 					'</div>' +
 					'<div class="answers">' +
 					answers.join('') +
+					'</h3>' +
 					'</div>'
 			);
 		}
@@ -107,17 +109,25 @@ function generateQuiz(
 				numCorrect++;
 
 				// color the answers green
-				answerContainers[i].style.color = 'lightgreen';
+				answerContainers[i].style.backgroundColor = '#7cf078';
 			}
 			// if answer is wrong or blank
 			else {
 				// color the answers red
-				answerContainers[i].style.color = 'red';
+				answerContainers[i].style.backgroundColor = '#dd7878';
 			}
 		}
 
 		// show number of correct answers out of total
-		resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
+		resultsContainer.innerHTML =
+			'<h2>' +
+			numCorrect +
+			' out of ' +
+			questions.length +
+			'<br> ' +
+			Math.round((numCorrect / questions.length) * 100) +
+			'%' +
+			'</h2>';
 	}
 
 	// show questions right away
