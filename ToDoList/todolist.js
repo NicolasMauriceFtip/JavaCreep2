@@ -1,3 +1,8 @@
+//css
+document.styleSheets;
+
+//document.getElementsByTagName('head')[0].appendChild(link);
+
 let form = document.getElementById('addForm');
 let itemList = document.getElementById('to-do-items');
 let filter = document.getElementById('filter');
@@ -47,11 +52,12 @@ function addItem(e) {
 itemList.addEventListener('click', removeItem);
 function removeItem(e) {
 	if (e.target.classList.contains('delete')) {
-		if (confirm('Delete an item?')) {
+		if (alert('You have deleted an item')) {
 			let li = e.target.parentElement;
 			itemList.removeChild(li);
 		}
 	}
+	//itemList.removeChild(e.target.parentElement);
 }
 
 //completed Items
