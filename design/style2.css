@@ -57,6 +57,10 @@ li{
     padding: 0.5em;
 }
 
+.passionList{
+	list-style-type:disc;
+}
+
 a{
     text-decoration: none;
     color: white;
