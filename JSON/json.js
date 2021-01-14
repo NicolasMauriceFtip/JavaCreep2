@@ -1,6 +1,3 @@
-
-
-
 //récupération donné json par Fetch API
 fetch('./us.json')
     .then (response => response.json())
@@ -14,10 +11,11 @@ fetch('./us.json')
         
         for(var i=0; i < member.length; i++){
             var {name,age,couleur,passions}=member[i];
+            //displaying info
             var myPassion='';
             for(var j=0;j<passions.length;j++){
                  myPassion += `<li class="passionList">${passions[j]}</li>`;
-                //console.log(myPassion);
+                //the passions are stored in an array, so we have to parse it again
             }
             
             var markup = `
@@ -29,7 +27,7 @@ fetch('./us.json')
                 <ul>${myPassion}</ul>
             </section>`;
             console.log(`${name}`);
-            //thanks my queen for the + <3
+            //injecting html code into our page
             document.querySelector("#info").innerHTML += markup;
             }
         
