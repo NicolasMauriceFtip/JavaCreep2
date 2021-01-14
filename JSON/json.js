@@ -1,6 +1,4 @@
 
-const head = document.querySelector("top-banner");
-const mainInfo = document.querySelector("info");
 
 
 //récupération donné json par Fetch API
@@ -25,8 +23,8 @@ fetch('./us.json')
             var markup = `
             <section>
                 <h3 id="member">${name}</h3>
-                <p> âge: ${age} ans </p>
-                <p> couleur favorite: ${couleur} </p>
+                <p>Âge: ${age} ans </p>
+                <p>Couleur favorite: ${couleur} </p>
                 <p>Passions :</p>
                 <ul>${myPassion}</ul>
             </section>`;
