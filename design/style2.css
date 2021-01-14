@@ -485,3 +485,46 @@ input::placeholder {
 	color: var(--darkred);
 	background-color: none;
 }
+
+/************* QUIZ **************/
+
+
+.question, .answers{
+	font-size:1.5em;
+	margin: 1em;
+	
+}
+/*statement & choices*/
+.question{
+	color : var(--blue);
+	text-align: left;
+}
+
+.answers li{
+	display: flex;
+	flex-direction: column;
+	
+}
+
+.answers li div{
+	text-align: left;
+	margin-left: 2em;
+	margin-top: -1em;
+}
+
+#submitQuiz{
+	margin: 1em;
+	height: 2em;
+	width: 10em;
+	border-radius: 0.5em;
+	background-color: white;
+	border: 1px solid var(--orange);
+	font-family: lato regular;
+	font-size: 1.5em;
+	color:var(--orange);
+}
+
+#submitQuiz:hover{
+	background-color: var(--orange);
+	color: white;
+}

@@ -30,7 +30,7 @@ var myQuestions = [
 
 var quizContainer = document.getElementById('quiz');
 var resultsContainer = document.getElementById('results');
-var submitButton = document.getElementById('submit');
+var submitButton = document.getElementById('submitQuiz');
 
 generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
 
@@ -54,18 +54,18 @@ function generateQuiz(
 			for (letter in questions[i].answers) {
 				// ...add an html radio button
 				answers.push(
-					'<div>' +
-						'<label>' +
+					'<li>' +						
 						'<input type="radio" name="question' +
 						i +
 						'" value="' +
 						letter +
 						'">' +
+						"<div>"+
 						letter +
 						': ' +
 						questions[i].answers[letter] +
-						'</label>' +
-						'</div>'
+						"</div>"+						
+						'</li>'
 				);
 			}
 
@@ -75,10 +75,10 @@ function generateQuiz(
 					'<h3>' +
 					questions[i].question +
 					'</div>' +
-					'<div class="answers">' +
+					'<ul class="answers">' +
 					answers.join('') +
 					'</h3>' +
-					'</div>'
+					'</ul>'
 			);
 		}
 
