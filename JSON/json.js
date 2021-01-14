@@ -16,19 +16,19 @@ fetch('./us.json')
         
         for(var i=0; i < member.length; i++){
             var {name,age,couleur,passions}=member[i];
-            var myPassion=[];
+            var myPassion='';
             for(var j=0;j<passions.length;j++){
-                myPassion[j]= `<li id="passions">  ${passions[j]} </li>`;
-                console.log(myPassion);
-               
+                 myPassion += `<li class="passionList">${passions[j]}</li>`;
+                //console.log(myPassion);
             }
+            
             var markup = `
             <section>
                 <h3 id="member">${name}</h3>
                 <p> âge: ${age} ans </p>
                 <p> couleur favorite: ${couleur} </p>
-                <ul> passions : ${myPassion}</ul>
-                
+                <p>Passions :</p>
+                <ul>${myPassion}</ul>
             </section>`;
             console.log(`${name}`);
             //thanks my queen for the + <3

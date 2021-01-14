@@ -1,4 +1,10 @@
 /************* GENERAL **************/
+:root{
+	--blue: rgb(43, 104, 128);
+	--orange: rgb(236, 105, 29);
+}
+
+/*font*/
 @font-face{
 	font-family: miller;
 	src: url(./font/Miller-Regular.otf);
@@ -12,6 +18,7 @@
 	src: url(./font/Lato-Regular.ttf);
 }
 
+/*Géneral Box*/
 *{
 	box-sizing: border-box;
 	padding-top: none;
@@ -23,7 +30,7 @@
 
 /************* BIG PARTS **************/
 footer, header{
-    background-color: rgb(43, 104, 128);
+    background-color:var(--blue);
 	color: white;
 	font-family: lato thin;
 	border-radius: 2em 0.5em;
@@ -32,12 +39,13 @@ footer, header{
 	justify-content: center;
 	align-items: center;
 }
+
 body{
 	background-color: rgb(255, 255, 255);
 	font-family: arial;
 	text-align: center;
-   	margin-left: 10em;
-    margin-right: 10em;
+   	margin-left: 15em;
+    margin-right: 15em;
 }
 
 /************* MENU **************/
@@ -45,6 +53,7 @@ body{
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	justify-content: space-between;
 	
 }
 
@@ -52,6 +61,7 @@ ul{
 	list-style: none;
 	
 }
+
 li{
 	
 	padding: 0.5em;
@@ -59,15 +69,18 @@ li{
 
 a{
     text-decoration: none;
-    color: white;
+	color: white;
+	
 }
+
 a:hover{
-    color: rgb(236, 105, 29);
+	color: rgb(236, 105, 29);
+	
 }
 
 /************* ABOUT US **************/
 main{
-	border: 2px solid rgb(236, 105, 29);
+	border: 2px solid var(--orange);
 	border-radius: 2em 0.5em;
 	margin-top : 3em;
 	margin-bottom : 3em;
@@ -92,25 +105,37 @@ h1{
 }
 h2{
 	font-family: miller;
-	font-size: 2em;
-	color: rgb(43, 104, 128);
+	font-size: 5em;
+	color: var(--blue);
 }
 #info{
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: flex-start;
+	flex-wrap: wrap;
 }
+
+/* Each member container*/
 section{
 	display: flex;
 	flex-direction: column;
-	
-	margin: 1em;
+	margin-right: 2em;
+	margin-left: 2em;
+	text-align: left;
 	
 }
 #member{
-	margin: 1em;
-	color: rgb(236, 105, 29);
+	margin-top: 0.5em;
+	color: var(--orange);
+	font-family: miller;
+	font-size: 2em;
 }
+
+/*list passions*/
+.passionList{
+	list-style-type:disc;
+}
+
 #passion{
 	list-style-type: circle;
 }
