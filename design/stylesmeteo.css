@@ -178,12 +178,7 @@
     letter-spacing: 0.05em;
   }
    
-  .ajax-section .city-temp {
-    font-size: 5rem;
-    font-weight: bold;
-    margin-top: 10px;
-    color: var(--text_dark);
-  }
+ 
 
   .ajax-section .city-temp .feels-like{
     font-size: 1rem;

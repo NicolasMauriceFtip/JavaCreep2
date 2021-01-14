@@ -52,7 +52,7 @@ fetch(url)
         console.log(data);
 
         const { main, name, sys, weather , wind } = data;
-        const icon = `https://openweathermap.org/img/wn/${weather[0]["icon"]}@2x.png`;
+        const icon = `https://openweathermap.org/img/wn/${weather[0]["icon"]}@4x.png`;
 
         const li = document.createElement("li");
         li.classList.add("city");
@@ -61,20 +61,19 @@ fetch(url)
             <span>${name}</span>
             <sup>${sys.country}</sup>
         </h2>
-        <div class="city-temp">${Math.round(main.temp)}<sup>°C</sup></div>
-        <div class="feels-like">Ressenti : ${Math.round(main.feels_like)}<sup>°C</sup></div>
+        <div class="city-temp">${Math.round(main.temp)}<sup><span id="celsius">°C</span></sup></div>
+        <div class="feels-like">Ressenti : ${Math.round(main.feels_like)}<sup><span id="celsius">°C</span></sup></div>
         <figure>
             <img class="city-icon" src=${icon} alt=${weather[0]["main"]}>
             <figcaption>${weather[0]["description"]}</figcaption>
         </figure>
-        <div><br>${wind.speed}m/s</div>
+        <div id="windspeed"><br>Vents: ${wind.speed}m/s</div>
         <div id="compass_div">
         
           <div class="compass" style="transform: rotate(${wind.deg}deg)"></div>
-          
-          Vents
+        
         </div>
-        <div><br>Humidité: ${main.humidity}%</div>
+        <div id="humidity"><br>Humidité: ${main.humidity}%</div>
 
         `;
         

@@ -1,30 +1,4 @@
-
-    /*var audio = new Audio("../media/santa-esmeralda-dont-let-me-be-misunderstood-1977-official-video.mp3");
-    function play() {
-        audio.play();
-      }
-    function pause(){
-        audio.pause();
-    }  
-var canvas = document.getElementById("canvas");*/
-
-
-/*var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
-var analyseur = contexteAudio.createAnalyser();
-
-audio = contexteAudio.createMediaStreamSource(stream);
-audio.connect(analyseur);
-
-analyseur.fftSize = 2048;
-var tailleMemoireTampon = analyseur.frequencyBinCount;
-var tableauDonnees = new Uint8Array(tailleMemoireTampon);
-
-contexteCanvas.clearRect(0, 0, LARGEUR, HAUTEUR);
-function dessiner() {
-    dessin = requestAnimationFrame(dessiner);
-    */
-
-   const audioPlayer = document.querySelector('audio');
+ const audioPlayer = document.querySelector('audio');
 
    audioPlayer.addEventListener('play', () => {
    
