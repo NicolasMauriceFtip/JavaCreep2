@@ -1,89 +1,95 @@
-//css
-document.styleSheets;
-
-//document.getElementsByTagName('head')[0].appendChild(link);
-
 let form = document.getElementById('addForm');
 let itemList = document.getElementById('to-do-items');
 let filter = document.getElementById('filter');
 let itemCompleted = document.getElementById('items-completed');
+let clearList = document.getElementById('clr');
 
-//add item
-
+//add item with complete and delete button
 form.addEventListener('submit', addItem);
 function addItem(e) {
 	// bloque action par defaut de l'interface event
 	e.preventDefault();
 
-	//retrieve item
+	//retrieve value from input textfield
 	let newItem = document.getElementById('item').value;
 
-	//create list
+	/* 
+		<ul> => already created at html
+		<li class="todo-lists"> 'value' </li>
+		<button class="complete">complete</button>
+		<button class="delete">delete</button>
+		</ul>
+	 */
+
+	//create list (li)
 	let li = document.createElement('li');
 	li.className = 'todo-lists';
-
+	//adds the value that was retrieved to li
 	li.appendChild(document.createTextNode(newItem));
-
+	// created li will be added to ul ("to do items")
 	itemList.appendChild(li);
 
-	//create completeBtn
-
-	//	let completeBtn = document.createElement('input');
-
+	//create completeBtn(button element,  class and value)
 	let completeBtn = document.createElement('button');
 	completeBtn.className = 'complete';
 	completeBtn.appendChild(document.createTextNode('complete'));
 
+	//action/event when complete button is clicked
+	completeBtn.addEventListener('click', completeItem);
+	function completeItem(e) {
+		//create list that was completed(li)
+		let del = document.createElement('del');
+		let li = document.createElement('li');
+		li.className = 'completed-lists';
+		//creates the value of an item same value that was retrieved
+		li.appendChild(document.createTextNode(newItem));
+		del.appendChild(li);
+		// item will be added to ul ("completed items")
+		itemCompleted.appendChild(del);
+
+		//removes the item from ul (to do items)
+		itemList.removeChild(e.target.parentElement);
+	}
+	//complete btn added to the li
 	li.appendChild(completeBtn);
 	itemList.appendChild(li);
 
-	//create delete btn
+	//creates delete button(class name and value )
 	let deleteBtn = document.createElement('button');
 	deleteBtn.className = 'delete';
 	deleteBtn.appendChild(document.createTextNode('X'));
 
-	li.appendChild(deleteBtn);
-	itemList.appendChild(li);
-
-	document.getElementById('item').value = '';
-}
-
-//delete Item
-itemList.addEventListener('click', removeItem);
-function removeItem(e) {
-	if (e.target.classList.contains('delete')) {
-		if (alert('You have deleted an item')) {
+	//action for delete
+	deleteBtn.addEventListener('click', removeItem);
+	function removeItem(e) {
+		if (confirm('Deleting an item?')) {
+			//removes the parent element of deleteBtn w/c li
+			//e.target - element that triggered the event -> deleteBtn
 			let li = e.target.parentElement;
 			itemList.removeChild(li);
 		}
 	}
-	//itemList.removeChild(e.target.parentElement);
+
+	//deleteBtn added to li
+	li.appendChild(deleteBtn);
+	itemList.appendChild(li);
+
+	//clears/removes value from input textfield
+	document.getElementById('item').value = '';
 }
 
-//completed Items
-itemList.addEventListener('click', completeItem);
-function completeItem(e) {
-	//retrieve value from list
-	let item = document.getElementsByClassName('todo-lists')[0].childNodes[0]
-		.nodeValue;
-
-	//create list
-	let del = document.createElement('del');
-	let li = document.createElement('li');
-	li.className = 'completed-lists';
-	li.appendChild(document.createTextNode(item));
-	del.appendChild(li);
-	itemList.removeChild(e.target.parentElement);
-	itemCompleted.appendChild(del);
-}
-
-// Filter Items
+// Filter Items exist in to do list
 filter.addEventListener('keyup', filterItems);
 function filterItems(e) {
+	//convert all values to lowercase
 	var text = e.target.value.toLowerCase();
-	// Get lists
+	// Get items from the list
 	var items = itemList.getElementsByTagName('li');
-	// Convert to an array
+
+	/* 1.Converts items retrieved to an array and browse all items
+	2. store each item to a var
+	3. check each letter exists on an item 
+	*/
 	Array.from(items).forEach(function (item) {
 		var itemName = item.firstChild.textContent;
 		if (itemName.toLowerCase().indexOf(text) != -1) {
@@ -92,4 +98,16 @@ function filterItems(e) {
 			item.style.display = 'none';
 		}
 	});
+}
+
+// removes all items on the lists
+clearList.addEventListener('click', clrList);
+function clrList(e) {
+	e.preventDefault;
+	while (itemList.hasChildNodes()) {
+		itemList.removeChild(itemList.firstChild);
+	}
+	while (itemCompleted.hasChildNodes()) {
+		itemCompleted.removeChild(itemCompleted.firstChild);
+	}
 }
