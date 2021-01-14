@@ -1,7 +1,7 @@
 {
     "groupe": "Team JavaCreep",
     "member": [
-        {
+       { 
             "name": "Nicolas",
             "age": "30",
             "couleur": "jaune",
@@ -40,6 +40,16 @@
                 "le jeu de rôle",
                 "le dessin"
             ]
+        },
+        {
+            "name":"Rabeb",
+            "age": "31",
+            "couleur":"vieux-rose",
+            "passions":[
+                "jeux d'échecs",
+                "la décoration",
+                "les voyages"
+            ]        
         }
     ]
 }

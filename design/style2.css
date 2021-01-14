@@ -53,8 +53,8 @@ ul{
 	
 }
 li{
-	margin: 0.5em;
-    padding: 0.5em;
+	
+	padding: 0.5em;
 }
 
 a{
@@ -101,6 +101,9 @@ h2{
 	justify-content: space-between;
 }
 section{
+	display: flex;
+	flex-direction: column;
+	
 	margin: 1em;
 	
 }
@@ -108,5 +111,9 @@ section{
 	margin: 1em;
 	color: rgb(236, 105, 29);
 }
+#passion{
+	list-style-type: circle;
+}
+
 
 
