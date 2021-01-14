@@ -9,7 +9,7 @@
    
        const canvas = document.getElementById('canvas');
        canvas.width = window.innerWidth;
-       canvas.height = window.innerHeight;
+       canvas.height = 400;
        const ctx = canvas.getContext('2d');
    
        src.connect(analyseur);
