@@ -104,13 +104,10 @@ function filterItems(e) {
 clearList.addEventListener('click', clrList);
 function clrList(e) {
 	e.preventDefault;
-	do {
+	while (itemList.hasChildNodes()) {
 		itemList.removeChild(itemList.firstChild);
+	}
+	while (itemCompleted.hasChildNodes()) {
 		itemCompleted.removeChild(itemCompleted.firstChild);
-	} while (itemList.hasChildNodes() || itemCompleted.hasChildNodes());
-
-	// if (itemList.hasChildNodes() || itemCompleted.hasChildNodes()) {
-	// 	itemList.removeChild(itemList.firstChild);
-	// 	itemCompleted.removeChild(itemCompleted.firstChild);
-	// }
+	}
 }
