@@ -3,19 +3,19 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="../design/style2.css" />
 		<title>To Do List</title>
 	</head>
 	<body>
 		<header>
 			<nav>
-				<ul id="navigator">
+				<ul class="menu">
 					<li><a href="../Home/index.html">Home Back</a></li>
 					<li><a href="../music/music.html">Let's Play The Music</a></li>
 					<li><a href="../Meteo/meteo.html">Let's see the weather</a></li>
 					<li><a href="../GitHub/github.html">Find Me In Github </a></li>
 					<li><a href="../ToDoList/todolist.html">To Do LIST</a></li>
-					<li><a href="../JSON/json.html">ABOUT ME </a></li>
+					<li><a href="../JSON/json.html">About us </a></li>
 				</ul>
 			</nav>
 		</header>
@@ -23,12 +23,13 @@
 			<h1>What Should I Do ?</h1>
 
 			<h2>To Do List</h2>
-			<input type="text" id="filter" placeholder="Search Items..." />
-
+			<section class="searchBar">
+				<input type="text" id="filter" placeholder="Search Items..." />
+			</section>
 			<!-- lists -->
 
 			<!-- add list -->
-			<div>
+			<div class="container_list">
 				<h2>Add item</h2>
 				<form id="addForm">
 					<input
@@ -38,8 +39,6 @@
 						placeholder="add list"
 					/>
 					<input type="submit" id="submit" class="addBtn" value="Add" />
-					<br />
-					<br />
 				</form>
 				<button id="clr" type="submit">Clear list</button>
 
@@ -61,8 +60,6 @@
 		</main>
 		<footer>
 			<div class="footer">
-				<h2>Team JavaCreep</h2>
-				<h3>Léa-Rabeb-Jesusa-Alex-Nicolas</h3>
 				<h3>All rights reserved &copy; 2021</h3>
 			</div>
 		</footer>
