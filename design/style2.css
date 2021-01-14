@@ -100,18 +100,26 @@ main{
 
 }
 
-/*title main*/
+/*title*/
 h1{
 	color: var(--orange);
 	margin-top: -1.8em;
 	text-align: left;
 	font-family: miller;
-	
-
 }
+
 p{
 	margin-top: 1em;
 }
+
+/************* HOME **************/
+
+#mainTitle{
+	margin-top: 1em;
+	text-align: center;
+	font-size: 4em;
+}
+
 /************* ABOUT US **************/
 
 /*TEAM JAVACREEP*/
