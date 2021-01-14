@@ -3,20 +3,17 @@ const affichage = document.querySelector('.affichage');
 const form = document.querySelector('.form-github-recherche');
 const inpRecherche = document.querySelector('.inp-recherche');
 
-
+//standard API call to get data from github
 async function dataGithub(utilisateur){
 
     const reponse = await fetch(`${APICALL}${utilisateur}`);
     const data = await reponse.json();
-    
-    
-     //console.log(data);
-
     creationCarte(data);
 
 }
 
 dataGithub("nicolasmauriceitescia")
+//default value of the page is a search for our beloved queen
 
 function creationCarte(user){
 
@@ -32,6 +29,8 @@ function creationCarte(user){
     </div>
     `;
     affichage.innerHTML = carteHTML;
+
+    //creating a user card with the info we've gather from the API call
 }
 
 

@@ -4,6 +4,8 @@ const msg = document.querySelector(".top-banner .msg");
 const list = document.querySelector(".ajax-section .cities");
 const apiKey = "d912dbbeb92d8a4f923fd6e7b6a81045";
 
+//Defining every querySelector necesarry
+
 form.addEventListener("submit", e => {
     e.preventDefault();
     const inputVal = input.value;
@@ -13,11 +15,11 @@ form.addEventListener("submit", e => {
   const listItemsArray = Array.from(listItems);
 
     if (listItemsArray.length > 0) {
+      //this is used to create a new city card
         const filteredArray = listItemsArray.filter(el => {
+          //this whole section is about catching spelling mistakes
           let content = "";
-          //athens,gr
           if (inputVal.includes(",")) {
-            //athens,grrrrrr->invalid country code, so we keep only the first part of inputVal
             if (inputVal.split(",")[1].length > 2) {
               inputVal = inputVal.split(",")[0];
               content = el
@@ -40,11 +42,12 @@ form.addEventListener("submit", e => {
           form.reset();
           input.focus();
           return;
+          //again, checking if the city is already displayed
         }
     }
 
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=${apiKey}&units=metric`;
-
+    //Line to contect to the API
 
 fetch(url)
     .then(response => response.json())
@@ -52,10 +55,14 @@ fetch(url)
         console.log(data);
 
         const { main, name, sys, weather , wind } = data;
-        const icon = `https://openweathermap.org/img/wn/${weather[0]["icon"]}@4x.png`;
+        //the fetch has created a json file, we're extracting only the arrays we will use in our data const.
 
+        const icon = `https://openweathermap.org/img/wn/${weather[0]["icon"]}@4x.png`;
+        //the API provides the necesary icons to display weather, we're using the json value to fetch and display the correct one
         const li = document.createElement("li");
         li.classList.add("city");
+
+        //the whole markup will inject html code into our page to display a organised card with info that we got from the API request
         const markup = `
         <h2 class="city-name" data-name="${name},${sys.country}">
             <span>${name}</span>
