@@ -112,6 +112,9 @@ h1{
 	
 
 }
+p{
+	margin-top: 1em;
+}
 /************* ABOUT US **************/
 
 /*TEAM JAVACREEP*/
@@ -210,4 +213,14 @@ transition: background 0.3s ease-in-out;
     grid-template-columns: repeat(4, 1fr);
   }
  
+  .ajax-section .city {
+    position: relative;
+    padding: 40px 10%;
+    border-radius: 20px;
+    background: var(--blue);
+    color: white;
+  }
+  .city-name{
+	  color : white;
+  }
 
