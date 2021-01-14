@@ -3,9 +3,8 @@ header {
 	background-color: #b33771;
 }
 h1 {
-	justify-content: center;
 	text-align: center;
-	color: white;
+
 	padding: 20px, 20px;
 	width: 100%;
 	margin-left: auto;
@@ -39,19 +38,10 @@ ul li {
 	margin-top: 500px;
 	text-align: center;
 }
-h2 {
-	color: white;
-	width: 100%;
-}
-h3 {
-	color: white;
-}
 
 main {
 	padding: 50px;
-	justify-content: center;
 	text-align: center;
-	color: black;
 	width: 50%;
 	height: auto;
 	margin-left: auto;
@@ -59,13 +49,23 @@ main {
 	background-color: #f0c7c781;
 }
 
-ul {
+#navigator {
 	display: flex;
 }
 
-/**********	Music ***********/
-/* .mainMusic {
-	display: inline-block;
-} */
+#filter {
+	width: 50%;
+	height: 20px;
+}
+#clr {
+	width: 50%;
+	height: 25px;
+	font-size: 15px;
+}
 
-/***** to do list ****/
+.add {
+	height: 25px;
+}
+.addBtn {
+	width: 80px;
+}
