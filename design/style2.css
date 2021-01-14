@@ -208,124 +208,185 @@ transition: background 0.3s ease-in-out;
 /* results parts*/
    
 	/*grid*/
-  .ajax-section .cities {
-    display: grid;
-    grid-gap: 2em 2em;
-	grid-template-columns: repeat(4, 1fr);
-	
-	
-  }
+.ajax-section .cities {
+display: grid;
+grid-gap: 2em 2em;
+grid-template-columns: repeat(4, 1fr);
 
-  @media screen and (max-width: 1800px) { 
-    .ajax-section .cities {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-   
-  @media screen and (max-width: 1600px) {
-    .ajax-section .cities {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-   
-  @media screen and (max-width: 1100px) {  
-    .ajax-section .cities {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  }
-  
-  /*container with border*/
-  .ajax-section .city {
-	position: relative;
-	padding: 40px 10%;
-	margin-bottom: 1.5em;
-	margin-right: 1.5em;
-	border: 2px solid;
-	border-radius: 20px;
-	border-color: var(--blue);
-	background-color: white;
-	
-	box-shadow: 1em 1em 0.5em var(--blue) ;
-  }
-  
-  /*city name & co*/
-  .ajax-section .city sup {
-	font-size: 0.2em;
-  }
 
-  .ajax-section .city-name sup {
-    padding: 0.2em 0.6em;
-    border-radius: 1em;
-    color: white;
-	background: var(--blue);
-	font-family: lato regular;
-  }
+}
 
-  /*temperature & feel*/
-  .ajax-section .city-temp, .feels-like{
-	font-size: 5em;
-	text-transform: uppercase;
-	letter-spacing: 0.05em;
-    font-weight: bold;
-	margin-top: 10px;
-	text-align: center;
-  }
-  
-   .feels-like{
-	  font-size: 2em;;
-  }
-  #celsius{
-	font-size: 3em;
-  }
-  	/*weather picture*/
-  .ajax-section figure{
+@media screen and (max-width: 1800px) { 
+.ajax-section .cities {
+	grid-template-columns: repeat(3, 1fr);
+}
+}
+
+@media screen and (max-width: 1600px) {
+.ajax-section .cities {
+	grid-template-columns: repeat(2, 1fr);
+}
+}
+
+@media screen and (max-width: 1100px) {  
+.ajax-section .cities {
+	grid-template-columns: repeat(1, 1fr);
+}
+}
+
+/*container with border*/
+.ajax-section .city {
+position: relative;
+padding: 40px 10%;
+margin-bottom: 1.5em;
+margin-right: 1.5em;
+border: 2px solid;
+border-radius: 20px;
+border-color: var(--blue);
+background-color: white;
+
+box-shadow: 1em 1em 0.5em var(--blue) ;
+}
+
+/*city name & co*/
+.ajax-section .city sup {
+font-size: 0.2em;
+}
+
+.ajax-section .city-name sup {
+padding: 0.2em 0.6em;
+border-radius: 1em;
+color: white;
+background: var(--blue);
+font-family: lato regular;
+}
+
+/*temperature & feel*/
+.ajax-section .city-temp, .feels-like{
+font-size: 5em;
+text-transform: uppercase;
+letter-spacing: 0.05em;
+font-weight: bold;
+margin-top: 10px;
+text-align: center;
+}
+
+.feels-like{
+	font-size: 2em;;
+}
+#celsius{
+font-size: 3em;
+}
+/*weather picture*/
+.ajax-section figure{
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+.ajax-section img{
+object-fit: contain;
+}
+
+/*weather indication*/
+.ajax-section figcaption {
+display: flex;
+justify-content: center;
+text-transform: uppercase;
+letter-spacing: 0.05em;
+margin-top: -2em;
+font-size: 1.5em;
+}
+
+/*wind indication*/
+.ajax-section #windspeed{
+display: flex;
+justify-content: center;
+text-transform: uppercase;
+letter-spacing: 0.05em;
+
+}
+/*styles pour compass météo*/
+
+#compass_div{
+background: url('../media/compass_bg.png') center center no-repeat;
+background-size: 75%;
+position: relative; 
+width: 160px;
+height: 160px;
+}
+
+.compass{
+background: url('../media/compass.png') center center no-repeat;
+background-size: 35%;
+width: 160px;
+height: 160px;
+}
+
+#humidity{
+text-align: center;
+text-transform: uppercase;
+letter-spacing: 0.05em;
+}
+
+/************* GITHUB **************/
+
+/*search bar*/
+.githubSearch {
+display: flex;
+text-align: center;
+}
+
+.githubSearch input[type=text]{
+height: 5em;
+width: 30em;
+margin: 2em;
+border: 1px solid var(--orange);
+border-radius: 1em;
+}
+
+input::placeholder {
+	color: grey;	
+}
+
+.affichage {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-  }
-  .ajax-section img{
-	object-fit: contain;
+    justify-content: center;
 }
 
-  /*weather indication*/
-  .ajax-section figcaption {
-	display: flex;
-	justify-content: center;
-    text-transform: uppercase;
-	letter-spacing: 0.05em;
-	margin-top: -2em;
-	font-size: 1.5em;
-  }
-
-  /*wind indication*/
-  .ajax-section #windspeed{
-	display: flex;
-	justify-content: center;
-	text-transform: uppercase;
-	letter-spacing: 0.05em;
-	
-  }
-  /*styles pour compass météo*/
-
-  #compass_div{
-    background: url('../media/compass_bg.png') center center no-repeat;
-    background-size: 75%;
-    position: relative; 
-    width: 160px;
-    height: 160px;
-
-  }
-
-  .compass{
-    background: url('../media/compass.png') center center no-repeat;
-    background-size: 35%;
-    width: 160px;
-    height: 160px;
-  }
-
-  #humidity{
-	text-align: center;
-	text-transform: uppercase;
-	letter-spacing: 0.05em;
+/*avatar*/
+.avatar {
+    height: 400px;
+    width: auto;
+    border-radius: 50%;   
+    background: #000;
+	border: 1px solid var(--blue);
+	margin-top:2em;
 }
 
+/*name user*/
+.carte h2{
+	/*haut droit bas gauche*/
+	margin: 0.2em 2em 0em 2em;
+	padding-top: 0.2em;
+	background-color: transparent;
+	border: 2px solid;
+	color: var(--blue);
+	border-radius: 1em 0.2em;
+}
+
+/* infos*/
+.cont-infos {
+	border: 2px solid var(--blue);
+	border-radius: 2em 0.5em;
+	background-color: rgb(114, 182, 209);
+    margin-top: 20px;
+	list-style-type: none;
+	color: white;
+}
+
+li {
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 2em;
+}
