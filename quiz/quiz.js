@@ -65,7 +65,7 @@ function generateQuiz(
 						': ' +
 						questions[i].answers[letter] +
 						"</div>"+						
-						'</li>'
+					'</li>'
 				);
 			}
 
